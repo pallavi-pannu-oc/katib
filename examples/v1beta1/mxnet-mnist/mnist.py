@@ -60,14 +60,7 @@ if __name__ == '__main__':
                         help='the number of classes')
     parser.add_argument('--num-examples', type=int, default=60000,
                         help='the number of training examples')
-    parser.add_argument('--num-layers', type=int, default=2,
-                        help='the number of layers')
-    parser.add_argument('--lr', type=float, default=0.01,
-                        help='learning rate')
-    parser.add_argument('--optimizer', type=str, default='adam',
-                        help='optimizer')
-    parser.add_argument('--batch-size', type=int, default=64,
-                        help='batch size')
+    
     parser.add_argument('--add_stn',  action="store_true", default=False,
                         help='Add Spatial Transformer Network Layer (lenet only)')
     parser.add_argument('--image_shape', default='1, 28, 28', help='shape of training images')
@@ -82,8 +75,6 @@ if __name__ == '__main__':
         disp_batches=100,
         num_epochs=10,
         lr=.05,
-        optimizer='adam',
-        num_layers=2,
         lr_step_epochs='10'
     )
     args = parser.parse_args()
