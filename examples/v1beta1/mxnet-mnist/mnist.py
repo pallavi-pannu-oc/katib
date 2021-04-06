@@ -64,7 +64,7 @@ if __name__ == '__main__':
                         help='the number of layers')
     parser.add_argument('--lr', type=float, default=0.01,
                         help='learning rate')
-    parser.add_argument('--optimizer', type=categorical, default=adam,
+    parser.add_argument('--optimizer', type=str, default=adam,
                         help='optimizer')
     parser.add_argument('--batch-size', type=int, default=64,
                         help='batch size')
