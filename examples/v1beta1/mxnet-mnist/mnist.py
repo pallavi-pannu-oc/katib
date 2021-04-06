@@ -60,6 +60,14 @@ if __name__ == '__main__':
                         help='the number of classes')
     parser.add_argument('--num-examples', type=int, default=60000,
                         help='the number of training examples')
+    parser.add_argument('--num-layers', type=int, default=${trialParameters.numberLayers},
+                        help='the number of layers')
+    parser.add_argument('--lr', type=int, default=${trialParameters.learningRate},
+                        help='learning rate')
+    parser.add_argument('--optimizer', type=int, default=${trialParameters.optimizer},
+                        help='optimizer')
+    parser.add_argument('--batch-size', type=int, default=64,
+                        help='batch size')
 
     parser.add_argument('--add_stn',  action="store_true", default=False,
                         help='Add Spatial Transformer Network Layer (lenet only)')
