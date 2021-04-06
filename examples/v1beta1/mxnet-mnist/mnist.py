@@ -82,6 +82,8 @@ if __name__ == '__main__':
         disp_batches=100,
         num_epochs=10,
         lr=.05,
+        optimizer='adam',
+        num_layers=2,
         lr_step_epochs='10'
     )
     args = parser.parse_args()
