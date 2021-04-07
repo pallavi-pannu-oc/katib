@@ -79,6 +79,7 @@ if __name__ == '__main__':
         batch_size=64,
         disp_batches=100,
         num_epochs=10,
+        lr=0.05,
         lr_step_epochs='10'
     )
     args = parser.parse_args()
