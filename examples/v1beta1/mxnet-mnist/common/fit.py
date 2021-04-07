@@ -85,25 +85,21 @@ def add_fit_args(parser):
     train = parser.add_argument_group('Training', 'model training')
     train.add_argument('--network', type=str,
                        help='the neural network to use')
-    train.add_argument('--num-layers', type=int,
-                       help='number of layers in the neural network, \
-                             required by some networks such as resnet')
+   
     train.add_argument('--gpus', type=str,
                        help='list of gpus to run, e.g. 0 or 0,2,5. empty means using cpu')
     train.add_argument('--kv-store', type=str, default='device',
                        help='key-value store type')
     train.add_argument('--num-epochs', type=int, default=100,
                        help='max num of epochs')
-    train.add_argument('--lr', type=float, default=0.1,
-                       help='initial learning rate')
+
     train.add_argument('--lr-factor', type=float, default=0.1,
                        help='the ratio to reduce lr on each step')
     train.add_argument('--lr-step-epochs', type=str,
                        help='the epochs to reduce the lr, e.g. 30,60')
     train.add_argument('--initializer', type=str, default='default',
                        help='the initializer type')
-    train.add_argument('--optimizer', type=str, default='sgd',
-                       help='the optimizer type')
+  
     train.add_argument('--mom', type=float, default=0.9,
                        help='momentum for sgd')
     train.add_argument('--wd', type=float, default=0.0001,
